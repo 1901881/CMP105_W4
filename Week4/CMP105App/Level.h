@@ -3,6 +3,9 @@
 #include <SFML/Graphics.hpp>
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Cursor.h"
 #include <string.h>
 #include <iostream>
 
@@ -28,5 +31,14 @@ private:
 	// Level objects
 	GameObject testSprite;
 	sf::Texture texture;
+	sf::Texture gtexture;
+	sf::Texture cursor_t;
+	Player shroom;
+	Enemy goomba = Enemy(&windX);
+	Enemy goomba2 = Enemy(&windX);
+	GameObject * cursor;
+	float speed;
+	sf::Vector2u windX;
+	
 
 };
